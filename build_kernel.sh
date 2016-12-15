@@ -7,6 +7,7 @@ mkdir outputd801
 mkdir outputd802
 mkdir outputd803
 mkdir outputf320
+mkdir outputl01f
 mkdir outputls980
 mkdir outputvs980
 
@@ -25,6 +26,9 @@ make -C $(pwd) O=outputd803
 make -C $(pwd) O=outputf320 cyanogenmod_f320_defconfig 
 make -C $(pwd) O=outputf320
 
+make -C $(pwd) O=outputl01f cyanogenmod_f320_defconfig 
+make -C $(pwd) O=outputl01f
+
 make -C $(pwd) O=outputls980 cyanogenmod_ls980_defconfig 
 make -C $(pwd) O=outputls980
 
@@ -36,6 +40,7 @@ cp outputd801/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputd802/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputd803/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputf320/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
+cp outputl01f/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputls980/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputvs980/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 
