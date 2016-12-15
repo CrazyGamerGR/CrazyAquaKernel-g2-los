@@ -1,5 +1,12 @@
 #!/bin/bash
-
+#
+# Copyright - CrazyGamerGR
+#     		 ________     __   ___
+#    		/ ______|    |  | /  |
+#    		|  |         |  |/  /
+#   		|  |_____    |      \              
+#   		\_______|    |__|\___|
+#
 export ARCH=arm
 export CROSS_COMPILE=/home/francesco/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 mkdir outputd800
@@ -44,3 +51,18 @@ cp outputl01f/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputls980/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 cp outputvs980/arch/arm/boot/Image $(pwd)/arch/arm/boot/zImage
 
+./tools_crazy/dtbToolCM -o outputd800/arch/arm/boot/dt.img -s 2048 -p outputd800/scripts/dtc/ outputd800/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputd801/arch/arm/boot/dt.img -s 2048 -p outputd801/scripts/dtc/ outputd801/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputd802/arch/arm/boot/dt.img -s 2048 -p outputd802/scripts/dtc/ outputd802/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputd803/arch/arm/boot/dt.img -s 2048 -p outputd803/scripts/dtc/ outputd803/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputf320/arch/arm/boot/dt.img -s 2048 -p outputf320/scripts/dtc/ outputf320/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputl01f/arch/arm/boot/dt.img -s 2048 -p outputl01f/scripts/dtc/ outputl01f/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputls980/arch/arm/boot/dt.img -s 2048 -p outputls980/scripts/dtc/ outputls980/arch/arm/boot/
+
+./tools_crazy/dtbToolCM -o outputvs980/arch/arm/boot/dt.img -s 2048 -p outputvs980/scripts/dtc/ outputvs980/arch/arm/boot/
