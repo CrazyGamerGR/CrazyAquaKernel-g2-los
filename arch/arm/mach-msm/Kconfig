@@ -3037,6 +3037,12 @@ config WALL_CLK_SYSFS
 	 Support the wallclk directory in sysfs filesystem to enable the
 	 wall clock simulation and read the current SFN.
 
+config CPU_VOLTAGE_TABLE
+	bool "Enable CPU Voltage Table via sysfs for adjustements"
+	default y
+	help
+	  DTS based kernel User Votlage Control
+
 config MSM_LIMITER
 	bool "MSM Frequency Limiter Driver"
 	default y
